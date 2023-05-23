@@ -10,7 +10,6 @@
         max-width: 189px;
         flex-direction: column;
         justify-content: center;
-        text-align: center;
-        margin: 0 15px 0 28px;               
+        text-align: center;              
     }
 }

@@ -5,6 +5,10 @@
     background: #000000;
     border-radius: 2px;
     color: #fff;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    border: none;
 }
 .popup__button:hover {
     cursor: pointer;
@@ -16,6 +20,8 @@
     .popup__button { 
         width: 238px;
         height: 46px;
-        margin: 0 22px 25px;             
+        margin: 0 22px 25px;    
+        font-size: 14px;
+        line-height: 17px;         
     }
 }
