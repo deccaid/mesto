@@ -1,5 +1,4 @@
 .profile__text {
-  max-width: 336px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -21,6 +20,7 @@
 
 @media screen and (max-width:560px) {
   .profile__text {
+      max-width: 189px;
       font-size: 14px;
       line-height: 17px;
       margin: 14px 0 36px;
