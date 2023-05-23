@@ -1,0 +1,8 @@
+.card__info {    
+    display: flex;
+    margin: 25px 15px 31px 21px;
+    height: 23px;
+    max-width: 246px;
+    min-height: 28px;
+       
+}

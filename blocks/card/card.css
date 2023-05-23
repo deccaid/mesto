@@ -1,0 +1,13 @@
+.card {
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+@media screen and (max-width:320px) {
+    .card {
+        margin: 0 auto;
+    }
+}

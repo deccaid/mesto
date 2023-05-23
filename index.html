@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Четвертый проект" />
+    <meta name="keywords" content="html,css" />
+    <meta name="author" content="Илюшка" />
+    <link rel="stylesheet" href="pages/index.css" />
+    <title>mesto</title>
+</head>
+<section class="popup">            
+    <form class="popup__form">
+    <button class="popup__exit"></button>            
+    <h2 class="popup__title">Редактировать профиль</h2>
+    <div class="popup__inputs">
+    <input type="text" class="popup__input input__text_type_name" value="Жак-Ив Кусто">
+    <input type="text" class="popup__input input__text_type_profession" value="Исследователь океана">
+    </div>
+    <button class="popup__button" type="submit">Сохранить</button>
+    </form>
+</section>
+<body class="root">
+    <header class="header">
+        <img src="./images/logo (1).svg" class="header__logo" alt="Логотип Место">
+    </header>
+    <main>
+        <section class="profile">
+            <img src="./images/Avatar.svg" class="profile__avatar" alt="Аватарка">
+            <div class="profile__info">
+            <div class="profile__menu">                
+                <h2 class="profile__name">Жак-Ив Кусто</h2>
+                <p class="profile__text">Исследователь океана</p>                
+            </div>
+                <button  class="profile__edit-button"></button>
+            </div>
+            <button  class="profile__add-button"></button>  
+        </section>
+        <section class="cards">
+            <div class="card">
+                <img src="./images/card-besht.jpg" class="card__image" alt="">
+                <div class="card__info">
+                    <h3 class="card__name">Бештау</h3>
+                    <button class="card__like"></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/card-domb.jpg" class="card__image" alt="">
+                <div class="card__info">
+                    <h3 class="card__name">Домбай</h3>
+                    <button class="card__like"></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/card-kchr.jpg" class="card__image" alt="">
+                <div class="card__info">
+                    <h3 class="card__name">Карачаевск</h3>
+                    <button class="card__like"></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/card-mount.jpg" class="card__image" alt="">
+                <div class="card__info">
+                    <h3 class="card__name">Эльбрус</h3>
+                    <button class="card__like"></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/card-volga.jpg" class="card__image" alt="">
+                <div class="card__info">
+                    <h3 class="card__name">Волга</h3>
+                    <button class="card__like"></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/card-xurul.jpg" class="card__image" alt="">
+                <div class="card__info">
+                    <h3 class="card__name">Элиста</h3>
+                    <button class="card__like"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p class="footer__author">&copy 2022 Mesto Russia</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
