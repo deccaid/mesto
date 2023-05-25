@@ -6,15 +6,15 @@
     line-height: 48px;
     color: #FFFFFF;
     margin: 0;
-    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    width: 294px;
 }
 
 @media screen and (max-width:660px) {
     .profile__name {
-        width: 224px;
+        max-width: 224px;
         font-size: 32px;
         line-height: 34px;
     }
@@ -23,8 +23,9 @@
 
 @media screen and (max-width:560px) {
     .profile__name { 
-        width: 189px;
+        max-width: 189px;
         font-size: 27px;
         line-height: 33px;
+        margin: 0 0 7px 29px;
     }
 }
