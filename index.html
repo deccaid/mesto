@@ -19,88 +19,34 @@
         <div class="profile__info">
           <div class="profile__menu">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button" type="button"></button>
+            <button class="profile__edit-button profile__button" type="button" data-modal="popup__one">></button>
             <p class="profile__text">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__add-button" type="button"></button>
+        <button class="profile__add-button profile__button" type="button" data-modal="popup__two">></button>
       </section>
-      <section class="cards">
+      <div class="popup_pictures">
+        <div class="cards"></div>
+      </div>
+      <template id="place-template">      
         <div class="card">
-          <img
-            src="./images/card-besht.jpg"
-            class="card__image"
-            alt="Гора Бештау"
-          />
+          <img class="card__image" alt="Гора Бештау" />
           <div class="card__info">
-            <h2 class="card__name">Бештау</h2>
+            <h2 class="card__name"></h2>
             <button class="card__like" type="button"></button>
           </div>
         </div>
-        <div class="card">
-          <img
-            src="./images/card-domb.jpg"
-            class="card__image"
-            alt="Виды Домбая"
-          />
-          <div class="card__info">
-            <h2 class="card__name">Домбай</h2>
-            <button class="card__like" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/card-kchr.jpg"
-            class="card__image"
-            alt="Карачаевск"
-          />
-          <div class="card__info">
-            <h2 class="card__name">Карачаевск</h2>
-            <button class="card__like" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/card-mount.jpg"
-            class="card__image"
-            alt="Вид на гору Эльбрус"
-          />
-          <div class="card__info">
-            <h2 class="card__name">Эльбрус</h2>
-            <button class="card__like" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/card-volga.jpg"
-            class="card__image"
-            alt="Фото реки Волги"
-          />
-          <div class="card__info">
-            <h2 class="card__name">Волга</h2>
-            <button class="card__like" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/card-xurul.jpg"
-            class="card__image"
-            alt="Фото Хурула"
-          />
-          <div class="card__info">
-            <h2 class="card__name">Элиста</h2>
-            <button class="card__like" type="button"></button>
-          </div>
-        </div>
-      </section>
+      </template>
+      
     </main>
     <footer class="footer">
       <p class="footer__author">&copy; 2022 Mesto Russia</p>
     </footer>
-    <div class="popup">
+
+    <div class="popup" id="popup__one">
       <div class="popup__container">
-        <button class="popup__exit" type="button"></button>
-        <form class="popup__form" name="editPopupForm">
+        <button class="popup__exit" type="button" data-modal="popup__one" id="close_edit"></button>
+        <form class="popup__form" name="editPopupForm" id="editPopupForm">
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__inputs">
             <input
@@ -120,8 +66,36 @@
           </fieldset>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
+        
       </div>
     </div>
+    <div class="popup" id="popup__two">
+      <div class="popup__container">
+        <button class="popup__exit" type="button" data-modal="popup__two" id="close_add"></button>
+        <form class="popup__form" name="addPopupForm" id="addPopupForm">
+          <h2 class="popup__title">Новое место</h2>
+          <fieldset class="popup__inputs">
+            <input
+              type="text"
+              name="name"
+              class="popup__input"
+              id="input__text_type_title"
+              value="Название"
+            />
+            <input
+              type="text"
+              name="profession"
+              class="popup__input"
+              id="input__text_type_src"
+              value="Ссылка на картинку"
+            />
+          </fieldset>
+          <button class="popup__button" type="submit">Сохранить</button>
+        </form>
+        
+      </div>
+    </div>
+    
     <script src="./scripts/script.js"></script>
   </body>
 </html>
