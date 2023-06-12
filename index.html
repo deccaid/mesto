@@ -19,25 +19,37 @@
         <div class="profile__info">
           <div class="profile__menu">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button profile__button" type="button" data-modal="popup__one">></button>
+            <button
+              class="profile__edit-button profile__button"
+              type="button"
+              data-modal="popup__one"
+            >
+              >
+            </button>
             <p class="profile__text">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__add-button profile__button" type="button" data-modal="popup__two">></button>
+        <button
+          class="profile__add-button profile__button"
+          type="button"
+          data-modal="popup__two"
+        >
+          >
+        </button>
       </section>
       <div class="popup_pictures">
         <div class="cards"></div>
       </div>
-      <template id="place-template">      
-        <div class="card">
-          <img class="card__image" alt="Гора Бештау" />
+      <template id="place-template">
+        <div class="card" id="card">
+          <button class="card__delete" type="button" id="delete_card"></button>
+          <img class="card__image" alt="Места" />
           <div class="card__info">
             <h2 class="card__name"></h2>
-            <button class="card__like" type="button"></button>
+            <button class="card__like" type="button" id="cardlike"></button>
           </div>
         </div>
       </template>
-      
     </main>
     <footer class="footer">
       <p class="footer__author">&copy; 2022 Mesto Russia</p>
@@ -45,7 +57,12 @@
 
     <div class="popup" id="popup__one">
       <div class="popup__container">
-        <button class="popup__exit" type="button" data-modal="popup__one" id="close_edit"></button>
+        <button
+          class="popup__exit"
+          type="button"
+          data-modal="popup__one"
+          id="close_edit"
+        ></button>
         <form class="popup__form" name="editPopupForm" id="editPopupForm">
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__inputs">
@@ -66,12 +83,17 @@
           </fieldset>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
-        
       </div>
     </div>
+
     <div class="popup" id="popup__two">
       <div class="popup__container">
-        <button class="popup__exit" type="button" data-modal="popup__two" id="close_add"></button>
+        <button
+          class="popup__exit"
+          type="button"
+          data-modal="popup__two"
+          id="close_add"
+        ></button>
         <form class="popup__form" name="addPopupForm" id="addPopupForm">
           <h2 class="popup__title">Новое место</h2>
           <fieldset class="popup__inputs">
@@ -83,7 +105,7 @@
               value="Название"
             />
             <input
-              type="text"
+              type="url"
               name="profession"
               class="popup__input"
               id="input__text_type_src"
@@ -92,10 +114,26 @@
           </fieldset>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
-        
       </div>
     </div>
-    
+    <div class="popup popup_type_image" id="popupImage">
+      <div class="popup__img-container">
+        <button
+          type="button"
+          class="popup__exit"
+          data-modal="popupImage"
+          id="close__image"
+        ></button>
+        <div class="popup__figure">
+          <img
+            class="popup__img"
+            src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg"
+            alt=""
+          />
+          <figcaption class="popup__caption"></figcaption>
+        </div>
+      </div>
+    </div>
     <script src="./scripts/script.js"></script>
   </body>
 </html>

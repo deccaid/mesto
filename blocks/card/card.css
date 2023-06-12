@@ -8,8 +8,3 @@
     position: relative;
     
 }
-@media screen and (max-width:320px) {
-    .card {
-        margin: 0 auto;
-    }
-}
