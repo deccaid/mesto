@@ -7,11 +7,11 @@
     margin: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    /* visibility: hidden; */
+    visibility: hidden;
     align-items: center;
     justify-content: center;
-    /* opacity: 0.1; */
-    display: none;
+    opacity: 0.1;
+    
     
     
 }

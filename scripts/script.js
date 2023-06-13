@@ -96,6 +96,9 @@ function createCard({ name, link }) {
   cardImage.addEventListener("click", function () {
       let popup = document.getElementById('popupInscrease')
       popup.style.display = 'flex'
+      popup.style.visibility = 'visible'
+      popup.style.opacity = '1'
+      popup.style.transition = '1s'
       popupImg.src = link;
       popupImg.alt = name;
       popupCaption.textContent = name; 
@@ -109,7 +112,9 @@ function renderCard() {
   const closeImage = document.getElementById('close__image');
   closeImage.addEventListener("click", function () {
     let popup = document.getElementById('popupInscrease')
-    popup.style.display = 'none'
+    popup.style.visibility = 'hidden'
+    popup.style.opacity = '0.1'
+
   });
   const likeCard = document.querySelector('.card__like');
     likeCard.addEventListener("click", function (evt) {
