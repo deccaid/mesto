@@ -43,7 +43,7 @@
       <template id="place-template">
         <div class="card" id="card">
           <button class="card__delete" type="button" id="delete_card"></button>
-          <img class="card__image" alt="Места" data-modal-btn="popup_increase-image" src="" />
+          <img class="card__image" alt="#" data-modal-btn="popup_increase-image" src="#" />
           <div class="card__info">
             <h2 class="card__name"></h2>
             <button class="card__like" type="button" id="cardlike"></button>
@@ -60,7 +60,6 @@
         <button
           class="popup__exit"
           type="button"
-          data-modal-btnClose="popup_edit-profile"
           id="close_edit"
         ></button>
         <form class="popup__form" name="editPopupForm" id="editPopupForm">
@@ -93,7 +92,6 @@
           type="button"
           data-modal="popup__two"
           id="close_add"
-          data-modal-btnClose = "popup_add-card"
         ></button>
         <form class="popup__form" name="addPopupForm" id="addPopupForm">
           <h2 class="popup__title">Новое место</h2>
@@ -123,12 +121,11 @@
           type="button"
           class="popup__exit"
           id="close__image"
-          data-modal-btnClose="popup_increase-image"
         ></button>
         <div class="popup__figure">
           <img
             class="popup__img"
-            src=""
+            src="#"
             alt=""
           />
           <figcaption class="popup__caption"></figcaption>
