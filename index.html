@@ -37,7 +37,7 @@
           >
         </button>
       </section>
-      <section>
+      <section class="content">
         <div class="cards"></div>
       </section>
       <template id="place-template">
@@ -55,27 +55,27 @@
       <p class="footer__author">&copy; 2022 Mesto Russia</p>
     </footer>
 
-    <div class="popup" id="popup_edit-profile" data-modal-window="popup_edit-profile">
+    <div class="popup popup_edit_profile">
       <div class="popup__container">
         <button
           class="popup__exit"
           type="button"
           id="close_edit"
         ></button>
-        <form class="popup__form" name="editPopupForm" id="editPopupForm">
+        <form class="popup__form" name="editPopupForm">
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__inputs">
             <input
               type="text"
               name="name"
-              class="popup__input"
+              class="popup__input popup__input_type_name"
               id="input__text_type_name"
               value=""
             />
             <input
               type="text"
               name="profession"
-              class="popup__input"
+              class="popup__input popup__input_type_profession"
               id="input__text_type_profession"
               value=""
             />
@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <div class="popup" id="popup_add-card" data-modal-window="popup_add-card">
+    <div class="popup popup_add_card"  >
       <div class="popup__container">
         <button
           class="popup__exit"
@@ -99,23 +99,25 @@
             <input
               type="text"
               name="name"
-              class="popup__input"
+              class="popup__input popup__input_type_name"
               id="input__text_type_title"
               value=""
+              placeholder="Название"
             />
             <input
               type="url"
               name="profession"
-              class="popup__input"
+              class="popup__input popup__input_type_src"
               id="input__text_type_src"
               value=""
+              placeholder="Ссылка на картинку"
             />
           </fieldset>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
-    <div class="popup popup_type_image" id="popupInscrease" data-modal-window="popup_increase-image">
+    <div class="popup popup_type_image" >
       <div class="popup__img-container">
         <button
           type="button"
@@ -132,6 +134,7 @@
         </div>
       </div>
     </div>
+    <script src="./scripts/constants.js"></script>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
