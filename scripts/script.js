@@ -55,7 +55,6 @@ const renderCards = () => {
     cardContainer.append(newCard)
   })
 }
-
  
 openPopup = (popupElement) => { 
     popupElement.classList.add("popup_opened");     
