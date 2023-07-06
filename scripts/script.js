@@ -49,13 +49,13 @@ const createCard = ({name, link}) => {
   return newCard;
 }
 
-const renderCards = () => {
+const renderInitialCards = () => {
     initialCards.forEach(function (cardTemp) {
     const newCard = createCard(cardTemp);
     cardContainer.append(newCard)
   })
 }
-const closePopupEsc = (evt) => {
+const closePopupOnEsc = (evt) => {
   if(evt.key === 'Escape') {
     const popupOpened = document.querySelector('.popup_opened')
     closePopup(popupOpened)
@@ -69,11 +69,11 @@ function closePopupMousedown(evt) {
  
 openPopup = (popupElement) => { 
     popupElement.classList.add("popup_opened");
-    document.addEventListener('keydown', closePopupEsc) 
+    document.addEventListener('keydown', closePopupOnEsc) 
     document.addEventListener('mousedown', closePopupMousedown)     
 }  
 closePopup = (popupElement) => { 
-  document.removeEventListener('keydown', closePopupEsc)
+  document.removeEventListener('keydown', closePopupOnEsc)
     document.removeEventListener('mousedown', closePopupMousedown)
     popupElement.classList.remove("popup_opened");
 } 
@@ -83,7 +83,7 @@ handleFormSubmitEdit = (evt) => {
     nameTitle.textContent = nameInput.value; 
     jobTitle.textContent = jobInput.value; 
     closePopup(popupEditProfile);
-    resetValid(formEditProfile, classSet); 
+    resetValid(formEditProfile, validationConfig); 
 } 
 handleFormSubmitAdd = (evt) => { 
   evt.preventDefault();
@@ -91,8 +91,6 @@ handleFormSubmitAdd = (evt) => {
     name: titleInput.value,
     link: srcInput.value
   });
-  titleInput.value = ''
-  srcInput.value = ''
   cardContainer.prepend(newCard)
   closePopup(popupAddCard); 
 } 
@@ -112,14 +110,14 @@ function handleProfileButton() {
   openPopup(popupEditProfile);
   nameInput.value = nameTitle.textContent;
   jobInput.value = jobTitle.textContent;
-  resetValid(formEditProfile, classSet);
+  resetValid(formEditProfile, validationConfig);
 }
 function handleAddCardButton() {
   formAddCard.reset();
-  resetValid(formAddCard, classSet);
+  resetValid(formAddCard, validationConfig);
   openPopup(popupAddCard);
 }
-renderCards();  
+renderInitialCards();  
 buttonOpenAddCardForm.addEventListener('click', handleAddCardButton);
 buttonOpenEditProfileForm.addEventListener('click', handleProfileButton);
 formEditProfile.addEventListener('submit', handleFormSubmitEdit);  

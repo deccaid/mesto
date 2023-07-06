@@ -1,4 +1,4 @@
-const classSet = {
+const validationConfig = {
     formSelector: ".popup__form",
     inputSelector: ".popup__input",
     submitButtonSelector: ".popup__button",
@@ -10,7 +10,6 @@ const classSet = {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add(config.inputErrorClass);
     errorElement.textContent = errorMessage;
-    console.log(errorElement)
     errorElement.classList.add(config.errorClass);
   };
   
@@ -81,16 +80,21 @@ const classSet = {
       setEventListeners(formElement, config);
     });
   };
-  
+  function activePopupButton (inputList, buttonElement, config) {
+    buttonElement.classList.add(config.inactiveButtonClass);
+      buttonElement.setAttribute("disabled", true);
+  }
+  function inactivePopupButton (inputList, buttonElement, config) {
+    buttonElement.classList.remove(config.inactiveButtonClass);
+    buttonElement.removeAttribute("disabled");
+  }
   const toggleButtonState = (inputList, buttonElement, config) => {
     if (hasInvalidInput(inputList)) {
-      buttonElement.classList.add(config.inactiveButtonClass);
-      buttonElement.setAttribute("disabled", true);
+      activePopupButton(inputList, buttonElement, config)
     } else {
-      buttonElement.classList.remove(config.inactiveButtonClass);
-      buttonElement.removeAttribute("disabled");
+      inactivePopupButton(inputList, buttonElement, config)
     }
   };
   
-  enableValidation(classSet);
+  enableValidation(validationConfig);
   

@@ -1,7 +1,9 @@
 .popup__img {
     max-height: 540px;
     max-width: 816px;
+    display: block;
 }
+
 
 @media  screen and (max-width:630px) {
     .popup__img {

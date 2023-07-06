@@ -1,7 +1,6 @@
 .popup__input {
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin-bottom: 25px;
     width: 100%;
     font-family: 'Inter', Arial, sans-serif;
     font-size: 14px;
@@ -11,7 +10,4 @@
 }
 .popup__input:last-child {
     margin-bottom: 0;
-}
-.popup__input:invalid {
-    margin-bottom: 5px;
 }
